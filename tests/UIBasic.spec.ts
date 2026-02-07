@@ -25,9 +25,18 @@ test('test case',async ({browser,page})=>
         console.log(Allproduct.nth(0).textContent())
         if(productname.includes('ADIDAS')){
             productLocator.click()
-            
         }
     }
+    
+    await page.locator("[routerlink*='cart']").click();
+    await page.locator("button",{hasText:'Checkout'}).waitFor({state:'visible',timeout:10000})
+    await page.locator("button",{hasText:'Checkout'}).click()
+    const Country=page.locator("[placeholder='Select Country']")
+    
+    await Country.waitFor({state:'visible',timeout:10000})
+    await Country.pressSequentially('ind')
+   
+    
 
    
 
