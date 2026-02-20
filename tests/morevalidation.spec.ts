@@ -24,8 +24,8 @@ test('test all partices method',async({page,browser})=>{
     const count=await mouseloactor.count()
 
     await Promise.all(
-        Array.from({length:count},(_,i)=>mouseloactor.nth(i).textContent().then(text=>console.log(text))))
-      
+        Array.from({length:count},(_,i)=>mouseloactor.nth(i).textContent().then(text=>console.log(text)))
+    )
     const frameloctor=await page.frameLocator('#courses-iframe')
     
     await frameloctor.locator('[href*="lifetime-access"]:visible').click();
