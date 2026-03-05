@@ -7,10 +7,12 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "webtest":"npx playwright test --grep @web"
+    "webtest": "npx playwright test --grep @web"
   },
   "devDependencies": {
     "@playwright/test": "^1.58.1",
-    "@types/node": "^25.1.0"
+    "@types/node": "^25.1.0",
+    "allure-commandline": "^2.37.0",
+    "allure-playwright": "^3.5.0"
   }
 }
