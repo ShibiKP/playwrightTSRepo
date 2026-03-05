@@ -7,7 +7,7 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "webtest": "npx playwright test --grep @web --project=chrome"
+    "webtest": "npx playwright test --grep @web --reporter=line,allure-playwright --project=chrome"
   },
   "devDependencies": {
     "@playwright/test": "^1.58.1",
