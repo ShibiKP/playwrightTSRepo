@@ -5,7 +5,8 @@ export default defineConfig({
   retries:2, // once it's failed it will automatically it will executed for 2 time
   workers:3, //m=number of windows will be open
   timeout:4*10000,
-  reporter:'html',
+  reporter:[['line'],['allure-playwright'],['html']  ],
+  //reporter:'html',
   
   expect:{
     timeout:5*10000,
